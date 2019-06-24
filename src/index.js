@@ -1,31 +1,33 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import "../node_modules/materialize-css/dist/css/materialize.min.css";
+import { Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
 
 class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1 className="center">Hello, World.</h1>
-        <div className="row">
-          <div className="col s6 offset-s3">
-            <div className="card">
-              <div className="card-content">
-                <span className="card-title">Parcel Example</span>
-                <p>
-                  I built this Parcel example app in about 5 minutes. Click the
-                  link below to learn more.
-                </p>
-              </div>
-              <div className="card-action grey lighten-4">
-                <a
-                  className="blue-text .text-accent-3"
+        <div className="row mt-5">
+          <div className="col-sm">
+            <h1 className="text-center mb-3">Hello, World.</h1>
+            <Card style={{ maxWidth: "50%" }} className="mx-auto">
+              <Card.Header>Parcel Example</Card.Header>
+              <Card.Body>
+                <Card.Subtitle className="mb-4 text-muted">
+                  A Parcel.js Example Built with React
+                </Card.Subtitle>
+                <Card.Text>
+                  I setup Parcel and built an app in 5 minutes and you can, too!
+                  Click the button below to learn more!
+                </Card.Text>
+                <Card.Link
+                  className="text-success"
                   href="https://github.com/methodbox/parcel-example"
                 >
                   Learn More
-                </a>
-              </div>
-            </div>
+                </Card.Link>
+              </Card.Body>
+            </Card>
           </div>
         </div>
       </div>
